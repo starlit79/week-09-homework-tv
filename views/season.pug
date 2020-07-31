@@ -2,15 +2,15 @@ html
   include partials/head.pug
 
   body
-    h1= showdata.title
-    div(class="season")= `Season ${seasonNum.number}`
+    h1= title
+    div(class="season")= `Season ${season.number}`
 
     table
       tr
         th No.
         th Title
         th Director
-      for episode in seasonNum.episodes
+      for episode in season.episodes
         tr
           td(class="number")= episode.number
           td(class="title")= episode.title
